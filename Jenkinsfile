@@ -2,7 +2,7 @@ pipeline{
 
    agent any
    parameters{
-               string(name:color defaultValue:'Pink')
+               string(name:color,defaultValue:'Pink')
 
    }
    stages{
