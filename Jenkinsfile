@@ -13,4 +13,16 @@ pipeline{
      }
 
    }
+   stage('choice'){
+      steps{
+
+             script{
+                     if(version=='1.1'){
+                                         echo 'build is 1.1'
+                                       }
+                       
+                   }
+            }
+
+   }
 }
