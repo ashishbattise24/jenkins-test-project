@@ -7,7 +7,9 @@ pipeline{
    }
    stages{
      stage('string'){
+       steps{
                      echo '$color'
+       }
      }
 
    }
