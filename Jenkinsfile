@@ -10,7 +10,6 @@ stages{
    steps{
           echo 'hello retry 3'
        }
-    }
  
    }
  }
