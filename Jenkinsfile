@@ -1,33 +1,15 @@
 pipeline{
+ agent any
+stages{
 
-   agent any
-   parameters{
-               string(name:'COLOR',defaultValue:'Pink')
-               choice(name:'ENV',choices:['staging','prod'])
-   }
-   stages{
-     stage('string'){
-
-      }
-       steps{
-          retry(5){           
-          echo "$COLOR"
-         }
+  stage('test'){
+   steps{
+       retry(3){
+          echo 'hello retry 3'
        }
-     }
-
-   
-     stage('choice'){
-                    steps{
-
-                           script{
-                                  if(ENV=='prod'){
-                                                   echo "env is $ENV"
-                                       }
-                       
-                   }
-            }
-
+    }
+ 
    }
+ }
 
 }
