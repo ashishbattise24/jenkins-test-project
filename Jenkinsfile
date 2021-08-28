@@ -2,13 +2,13 @@ pipeline{
 
    agent any
    parameters{
-               string(name:'color',defaultValue:'Pink')
+               string(name:'COLOR',defaultValue:'Pink')
                choice(name:'env',choices:['staging','prod'])
    }
    stages{
      stage('string'){
        steps{
-                     echo "$color"
+                     echo "$COLOR"
        }
      }
 
