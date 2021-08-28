@@ -14,11 +14,11 @@ pipeline{
 
    }
      stage('choice'){
-      steps{
+                    steps{
 
-             script{
-                     if(env=='prod'){
-                                         echo "env is $env"
+                           script{
+                                  if(env=='prod'){
+                                                   echo "env is $env"
                                        }
                        
                    }
