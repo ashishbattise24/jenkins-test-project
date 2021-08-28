@@ -18,7 +18,7 @@ pipeline{
 
              script{
                      if(env=='prod'){
-                                         echo 'env is prod'
+                                         echo "env is $env"
                                        }
                        
                    }
