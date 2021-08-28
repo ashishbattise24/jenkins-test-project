@@ -1,5 +1,9 @@
 pipeline{
  agent any
+ options{
+  retry(0)
+
+ }
 stages{
 
   stage('test'){
