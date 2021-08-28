@@ -3,7 +3,7 @@ pipeline{
    agent any
    parameters{
                string(name:'color',defaultValue:'Pink')
-               choice(name:'version',choices:['1.0','1.1'])
+               choice(name:'env',choices:['staging','prod'])
    }
    stages{
      stage('string'){
@@ -17,8 +17,8 @@ pipeline{
       steps{
 
              script{
-                     if(version=='1.1'){
-                                         echo 'build is 1.1'
+                     if(env=='prod'){
+                                         echo 'env is prod'
                                        }
                        
                    }
