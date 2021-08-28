@@ -3,7 +3,7 @@ pipeline{
    agent any
    parameters{
                string(name:'COLOR',defaultValue:'Pink')
-               choice(name:'env',choices:['staging','prod'])
+               choice(name:'ENV',choices:['staging','prod'])
    }
    stages{
      stage('string'){
@@ -17,8 +17,8 @@ pipeline{
                     steps{
 
                            script{
-                                  if(env=='prod'){
-                                                   echo "env is $env"
+                                  if(ENV=='prod'){
+                                                   echo "env is $ENV"
                                        }
                        
                    }
