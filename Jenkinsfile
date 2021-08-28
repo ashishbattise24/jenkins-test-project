@@ -7,13 +7,12 @@ pipeline{
    }
    stages{
      stage('string'){
-      options{
-         retry(3)
-         timeout(time:5, unit:'SECONDS')
 
       }
        steps{
-                     echo "$COLOR"
+          retry(5){           
+          echo "$COLOR"
+         }
        }
      }
 
