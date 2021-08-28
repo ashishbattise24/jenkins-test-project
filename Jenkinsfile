@@ -13,7 +13,7 @@ pipeline{
      }
 
    }
-     stage('choice'){
+/*     stage('choice'){
                     steps{
 
                            script{
@@ -24,5 +24,5 @@ pipeline{
                    }
             }
 
-   }
+   }*/
 }
