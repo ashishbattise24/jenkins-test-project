@@ -1,14 +1,15 @@
-pipeline {
- agent any
-options{
-retry(3)
+pipeline{
+agent any
+
+stages{
+  stage('build job1'){
+   steps{
+
+      build('job1')
+   }
+
+  }
+
 }
- stages {
- stage('Deploy') {
- steps {
- 
- sh 'echo hello'
- }
- }
- }
+
 }
