@@ -1,20 +1,22 @@
 pipeline{
 agent any
+parameters{
 
-stages{
-  stage('build job1'){
-   steps{
-     script{
-      job_result = build(job:'job1',propagate: false).result
-      build('job2')
-      if(job_result=='FAILURE'){
-      currentBuild.result='UNSTABLE'
+  choice(name:'Nodes',
+         choices:"Linux n Mac")
+  choice(name:'Version',
+         choices:'3.4')
+}
+ stages{
+   stage('build'){
+
+      steps{
+              echo "$Nodes"
+              echo "Version"
+          }
       }
     }
-    }
-
-  }
-
-}
+ 
+ }
 
 }
