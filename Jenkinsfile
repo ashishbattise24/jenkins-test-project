@@ -5,7 +5,8 @@ stages{
   stage('build job1'){
    steps{
 
-      build('job1')
+      build(job:'job1',propogate: false)
+      build('job2')
    }
 
   }
