@@ -8,7 +8,7 @@ stages{
 
   stage('test'){
    steps{
-          echo 'hello retry 3'
+          echo hello retry 3'
        }
  
    }
