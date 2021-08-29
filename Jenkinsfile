@@ -11,8 +11,10 @@ parameters{
    stage('build'){
 
       steps{
+          script{
               echo "$Nodes"
               echo "Version"
+            }
           }
       }
     }
