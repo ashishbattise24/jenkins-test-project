@@ -24,7 +24,7 @@ stages{
                         }
  
                        stage('stage2job1'){
-                             state{
+                             steps{
                                     echo "Stage2 and job1"
 
                                   }
@@ -32,7 +32,7 @@ stages{
                        }
                        stage('stage2job2'){
 
-                           state{
+                           steps{
 
                                  echo "stage2 and job2"
  
