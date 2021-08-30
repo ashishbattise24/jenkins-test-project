@@ -34,7 +34,7 @@ stages{
 
                            steps{
 
-                                 echoi "stage2 and job2"
+                                 echo "stage2 and job2"
  
                                 }
                        }
