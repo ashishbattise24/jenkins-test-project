@@ -13,7 +13,17 @@ parameters{
       steps{
           script{
               echo "$Nodes"
-              echo "$Version"
+              if(Version=='3.4'){
+                      echo 'Version is 3.4'
+              }
+              elseif(Version=='3.5'){
+                 echo "Version is $Version"
+
+              }
+              else{
+
+                 echo "Version is $Version"
+              }
             }
           }
       }
