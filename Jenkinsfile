@@ -34,8 +34,7 @@ unstable{
  echo " action unstable"
 }
 cleanup{
- echo " action similar like always , it is using to cleanup folder or 
-workspace"
+ echo " action similar like always , it is using to cleanup folder or workspace"
 }
 }
  
