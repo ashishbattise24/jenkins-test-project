@@ -25,7 +25,7 @@ stages{
  
                        stage('stage2job1'){
                              steps{
-                                    echo "Stage2 and job1"
+                                    ech0o "Stage2 and job1"
 
                                   }
 
