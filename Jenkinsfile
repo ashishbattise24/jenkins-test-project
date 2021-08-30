@@ -15,12 +15,10 @@ parameters{
               echo "$Nodes"
               if(Version=='3.4'){
                       echo 'Version is 3.4'
-              
-              elseif(Version=='3.5'){
+             }elseif(Version=='3.5'){
                  echo "Version is $Version"
 
-              }
-              else{
+              }else{
 
                  echo "Version is $Version"
               }
