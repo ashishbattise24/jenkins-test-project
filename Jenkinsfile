@@ -1,41 +1,47 @@
-pipeline{
-agent any
-stages{
- stage('build'){
-    failFast true
-           parallel{
-               stage('stage1job1'){
-                  steps{
-                        echo "stage1 and job1"
-                        sleep(10)
-                      }
-               
-               }
-                stage('stage1job2'){
-                     steps{
-
-                            echoo "stge1 and job2"
-                            sleep(10)
-                     }
- 
-                }
-                stage('stage2job1'){
-                   steps{
-                          echo "stage2 and job1"
-                          sleep(5)
-                        }
-
-                }
-                stage('stage2job2'){
-                    steps{
-
-                            echo "stage2 and job2"
-                            sleep(5)
-                         }
-                }
-
-           }
+ipeline {
+ agent any
+ options{
+ timestamps()
  }
+ stages {
+ stage("stage1") {
+ steps{
+ sh "ls -l"
+ }
+ post{ 
+always{
+ echo " action always "
 }
-
+changed{
+ echo " action always Changed from previous state"
+}
+fixed{
+ echo " action Fixed when previous state is failure"
+}
+ regression{
+ echo " action when current state is fail/unstable/aborted , previous state is
+success"
+}
+aborted{
+ echo " action always aborted"
+}
+failure{
+ echo " action always failure"
+}
+success{
+ echo " action always success"
+}
+unstable{
+ echo " action unstable"
+}
+cleanup{
+ echo " action similar like always , it is using to cleanup folder or 
+workspace"
+}
+}
+ 
+ }
+ 
+ 
+ }
 }
