@@ -5,7 +5,7 @@ parameters{
   choice(name:'Nodes',
          choices:"Linux n Mac")
   choice(name:'Version',
-         choices:'3.4')
+         choices:['3.4','3.5','3.6'])
 }
  stages{
    stage('build'){
