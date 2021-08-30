@@ -13,7 +13,7 @@ parameters{
       steps{
           script{
               echo "$Nodes"
-              echo "Version"
+              echo "$Version"
             }
           }
       }
