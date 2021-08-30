@@ -18,7 +18,7 @@ stages{
                         
                         stage('stage1Job2'){
                                        steps{
-                                            eecho "Job2"
+                                            echo "Job2"
                                              sleep(10)
                                             }
                         }
@@ -34,7 +34,7 @@ stages{
 
                            steps{
 
-                                 echo "stage2 and job2"
+                                 echoi "stage2 and job2"
  
                                 }
                        }
