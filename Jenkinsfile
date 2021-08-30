@@ -16,6 +16,7 @@ stages{
     steps{
 
           echo "This is PollSCM"
+          git url: "https://github.com/kalaiarasan33/public.git"
     }
   }
 }
