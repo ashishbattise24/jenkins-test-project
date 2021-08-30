@@ -14,7 +14,7 @@ stages{
                 stage('stage1job2'){
                      steps{
 
-                            echo "stge1 and job2"
+                            echoo "stge1 and job2"
                             sleep(10)
                      }
  
