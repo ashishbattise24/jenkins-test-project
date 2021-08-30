@@ -2,7 +2,7 @@ pipeline{
 agent any
 stages{
  stage('build'){
-    failFAST true
+    failFast true
            parallel{
                stage('stage1job1'){
                   steps{
