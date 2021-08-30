@@ -1,23 +1,25 @@
 pipeline{
 agent any
-
-options{
-
- timestamps()
-}
-triggers{
-  pollSCM('* * * * *')
-
-}
 stages{
+  stage('build'){
 
-  stage('pollSCM'){
+             parallel{
+                       stage('job1'){
+                                steps{  
+                                       echo "Job1"
+                                     }
+                        }
+                        
+                        stage('Job2'){
+                                       steps{
+                                             echo "Job2"
+                                            }
+                        }
+ 
+                     }
 
-    steps{
-
-          echo "This is PollSCM"
-          git url: "https://github.com/kalaiarasan33/public.git"
-    }
+           
   }
+
 }
 }
