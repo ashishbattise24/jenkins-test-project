@@ -19,8 +19,7 @@ fixed{
  echo " action Fixed when previous state is failure"
 }
  regression{
- echo " action when current state is fail/unstable/aborted , previous state is
-success"
+ echo " action when current state is fail/unstable/aborted , previous state is success"
 }
 aborted{
  echo " action always aborted"
