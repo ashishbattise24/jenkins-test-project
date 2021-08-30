@@ -6,7 +6,7 @@ pipeline {
  stages {
  stage("stage1") {
  steps{
- sh "ls -l"
+ sh "lss -l"
  }
  post{ 
 always{
