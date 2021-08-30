@@ -7,7 +7,7 @@ timestamps()
 stages{
  
   stage('build'){
-        failFast  
+        failFast true 
              parallel{
                        stage('stage1job1'){
                                 steps{  
